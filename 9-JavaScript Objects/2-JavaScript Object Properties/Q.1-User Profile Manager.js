@@ -107,3 +107,49 @@
 // Expected:
 //
 // Occupation: Developer
+
+// Code:
+const user = {
+    name: "Tanishq",
+    age: 22,
+    city: "Ahmedabad",
+    email: "tanishq@example.com",
+    isVerified: false,
+    address: {
+        city: "Mumbai",
+        state: "Maharashtra",
+        country: "India"
+    }
+}
+console.log(`Name : ${user.name}`);
+console.log(`City : ${user.city}`);
+
+console.log(`Email : ${user["email"]}`);
+
+user.city = "Mumbai"
+console.log(`City : ${user.city}`);
+
+user.occupation = "Developer"
+console.log(`Occupation : ${user.occupation}`);
+
+let ans = "phone" in user
+if (ans) {
+    console.log("Phone number exists");
+
+} else {
+    console.log("Phone number does not exist");
+
+}
+delete user.email
+let ans2 = "email" in user
+if (!ans2) {
+    console.log("Email property deleted");
+}
+
+console.log(`State : ${user.address.state}`);
+console.log(`Country : ${user["address"]["country"]}`);
+
+console.log(user);
+
+const propertyName = "occupation"
+console.log(`Occupation : ${user[propertyName]}`);

@@ -47,7 +47,7 @@
 
 // Code : 
 
-calculateDiscount = (price , discount , quantity) =>{
+const calculateDiscount = (price , discount , quantity) =>{
     let total = price * quantity
     let discountAmount = total * discount / 100
     let finalPrice = total - discountAmount
@@ -55,15 +55,18 @@ calculateDiscount = (price , discount , quantity) =>{
 
 }
 let Price1 = 1000
-let Discount1 = 10%
+let Discount1 = 10
 let Quantity1 = 2
 
 let Price2 = 500
-let Discount2 = 20%
+let Discount2 = 20
 let Quantity2 = 3
 
 let Price3 = 2500
-let Discount3 = 15%
+let Discount3 = 15
 let Quantity3 = 1
 
-calculateDiscount()
+console.log(calculateDiscount(Price1,Discount1,Quantity1));
+console.log(calculateDiscount(Price2,Discount2,Quantity2));
+console.log(calculateDiscount(Price3,Discount3,Quantity3));
+ 

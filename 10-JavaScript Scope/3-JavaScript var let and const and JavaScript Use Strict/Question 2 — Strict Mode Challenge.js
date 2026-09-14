@@ -54,6 +54,12 @@
 // What does "use strict" change compared with normal JavaScript?
 
 // Your Strict Mode material specifically demonstrates that undeclared variables and certain operations such as deleting variables are not allowed in strict mode.
+// ✅ Output
+// Amit
+// 60000
+// TXN101
+// 5000
+// Withdrawal
 
 // Code : 
 

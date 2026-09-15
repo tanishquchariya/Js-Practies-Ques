@@ -80,3 +80,34 @@
 // Do NOT use any external library.
 
 // Use the Date object and Date GET methods from the PDF.
+
+// Code : 
+
+const joiningDate = new Date(2022,7,15,10,30,45)
+
+console.log(`Year : ${joiningDate.getFullYear()}`);
+console.log(`Month : ${joiningDate.getMonth()}`);
+console.log(`Date : ${joiningDate.getDate()}`);
+console.log(`Day : ${joiningDate.getDay()}`);
+console.log(`Hours : ${joiningDate.getHours()}`);
+console.log(`Minutes : ${joiningDate.getMinutes()}`);
+console.log(`Seconds : ${joiningDate.getSeconds()}`);
+console.log(`Milliseconds : ${joiningDate.getMilliseconds()}`);
+
+const months = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"]
+
+let mont = joiningDate.getMonth()
+let ans = months[mont]
+
+console.log(`Month Number: ${mont}`);
+console.log(`Month Name: ${ans}`);
+
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+let dayNo = joiningDate.getDay()
+let ans2 = days[dayNo]
+console.log(`Day Number: ${dayNo}`);
+console.log(`Day Name: ${ans2}`);
+
+console.log(`Time in milliseconds: ${joiningDate.getTime()}`);

@@ -72,7 +72,6 @@
 
 // Use the difference() method.
 
-
 // Also find students who are enrolled in dsaStudents
 // but NOT enrolled in webStudents.
 //
@@ -159,3 +158,45 @@ const dsaStudents = new Set(["Aman",
 webStudents.add("Vikas")
 webStudents.add("Priya")
 
+console.log(webStudents);
+
+console.log(webStudents.has("Rahul"))
+
+let ans2 = webStudents.has("Karan")
+console.log(ans2);
+
+console.log(webStudents.size);
+console.log(dsaStudents.size);
+
+let webOnly = webStudents.difference(dsaStudents)
+console.log(webOnly);
+
+let dsaOnly = dsaStudents.difference(webStudents)
+console.log(dsaOnly);
+
+for (const i of webOnly) {
+    console.log(i);
+    
+}
+for (const i of dsaOnly) {
+    console.log(i);
+    
+}
+
+let ans3 = ""
+for (const i of webStudents.values()) {
+    ans3 += i + " " ;
+}
+console.log(ans3);
+
+let ans4 = ""
+for (const i of dsaStudents.keys()) {
+    ans4 += i + " ";
+}
+console.log(ans4);
+
+
+console.log(typeof(webStudents));
+
+let ans5 = webStudents instanceof Set
+console.log(ans5);

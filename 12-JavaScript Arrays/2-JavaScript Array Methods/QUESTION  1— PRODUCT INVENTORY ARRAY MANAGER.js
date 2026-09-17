@@ -231,50 +231,180 @@ Calculate them using JavaScript.
 
 ===========================================================
 */
+// Code :
 
-// Code : 
-const products = ["Laptop",
-   "Mouse",
-   "Keyboard",
-   "Monitor",
-   "Headphones"]
+const products = [
+    "Laptop",
+    "Mouse",
+    "Keyboard",
+    "Monitor",
+    "Headphones"
+];
 
-console.log(products.at(0));
-console.log(products.at(-1));
-console.log(products.length);
 
-products.push("Webcam")
-products.unshift("USB Cable")
-console.log(products);
+// ==========================================
+// PART 1 — ACCESS PRODUCTS
+// ==========================================
 
-let A = products.pop()
-let B = products.shift()
-console.log(A, B);
-console.log(products);
+console.log("First product:", products.at(0));
 
-let C = products.join("|")
-console.log(C);
+console.log("Last product:", products.at(-1));
 
-const accessories = ["Charger",
-   "Power Bank",
-   "HDMI Cable"
-]
+console.log("Total products:", products.length);
 
-const completeInventory = []
-const ans = accessories.concat(completeInventory)
-console.log(`concat Array :  ${ans} `);
-console.log(products);
 
+// ==========================================
+// PART 2 — ADD PRODUCTS
+// ==========================================
+
+products.push("Webcam");
+
+products.unshift("USB Cable");
+
+console.log("Updated products:", products);
+
+
+// ==========================================
+// PART 3 — REMOVE PRODUCTS
+// ==========================================
+
+let removedLast = products.pop();
+
+let removedFirst = products.shift();
+
+console.log("Removed from end:", removedLast);
+
+console.log("Removed from beginning:", removedFirst);
+
+console.log("Products after removal:", products);
+
+
+// ==========================================
+// PART 4 — JOIN PRODUCTS
+// ==========================================
+
+let productsString = products.join(" | ");
+
+console.log("Joined products:", productsString);
+
+
+// ==========================================
+// PART 5 — CONCATENATE ARRAYS
+// ==========================================
+
+const accessories = [
+    "Charger",
+    "Power Bank",
+    "HDMI Cable"
+];
+
+const completeInventory = products.concat(accessories);
+
+console.log("Complete Inventory:", completeInventory);
+
+console.log("Original products:", products);
+
+
+// ==========================================
+// PART 6 — SPLICE
+// ==========================================
 
 console.log("Splice");
 
-for (let i = 0; i<products.length;i++) {
-   if (products[i] === 'Keyboard') {
-      let ans2 = products[i]
-      products.splice(products[i],1,"Gaming Keyboard")
-      console.log(ans2);
-      console.log(products);
-      
-      
-   }
+for (let i = 0; i < products.length; i++) {
+
+    if (products[i] === "Keyboard") {
+
+        const removedProduct = products.splice(
+            i,
+            1,
+            "Gaming Keyboard"
+        );
+
+        console.log("Removed product:", removedProduct);
+
+        console.log("Updated products:", products);
+    }
 }
+
+
+// ==========================================
+// PART 7 — SLICE
+// ==========================================
+
+console.log("Slice");
+
+const selectedProducts = products.slice(1, 4);
+
+console.log("Selected products:", selectedProducts);
+
+console.log("Original products:", products);
+
+
+// ==========================================
+// PART 8 — COPYWITHIN
+// ==========================================
+
+console.log("CopyWithin");
+
+const categories = [
+    "Electronics",
+    "Accessories",
+    "Gaming",
+    "Office"
+];
+
+console.log("Before copyWithin:", categories);
+
+categories.copyWithin(2, 0);
+
+console.log("After copyWithin:", categories);
+
+
+// ==========================================
+// PART 9 — FLAT
+// ==========================================
+
+console.log("Flat");
+
+const warehouseProducts = [
+    ["Laptop", "Mouse"],
+    ["Keyboard", "Monitor"],
+    ["Webcam", "Headphones"]
+];
+
+const allProducts = warehouseProducts.flat();
+
+console.log("Flattened products:", allProducts);
+
+
+// ==========================================
+// PART 10 — TO STRING
+// ==========================================
+
+console.log("Products as string:", allProducts.toString());
+
+
+// ==========================================
+// PART 11 — FINAL REPORT
+// ==========================================
+
+console.log("========== FINAL REPORT ==========");
+
+console.log("Total products:", products.length);
+
+console.log("First product:", products.at(0));
+
+console.log("Last product:", products.at(-1));
+
+console.log("Removed by pop():", removedLast);
+
+console.log("Removed by shift():", removedFirst);
+
+console.log("Current products:", products);
+
+console.log("Complete inventory:", completeInventory);
+
+console.log("Selected products:", selectedProducts);
+
+console.log("Flattened products:", allProducts);

@@ -77,7 +77,7 @@ REQUIREMENTS:
 
    - Check whether the user exists in userSessions.
    - If yes, print the user's name and session.
-   - Otherwise, print that the user has no active session.
+   - Otherwise, print that the .
 
 
 9. Test getUserSession() with:
@@ -143,3 +143,130 @@ as the key.
 
 ===========================================================
 */
+
+// Code : 
+// Create user objects
+
+const user1 = {
+   name: "Rahul",
+   role: "Admin"
+};
+
+const user2 = {
+   name: "Aman",
+   role: "Developer"
+};
+
+const user3 = {
+   name: "Neha",
+   role: "Manager"
+};
+
+const user4 = {
+   name: "Priya",
+   role: "Tester"
+};
+
+
+// Create WeakMap
+
+const userSessions = new WeakMap();
+
+
+// Add sessions
+
+userSessions.set(user1, "Session-101");
+userSessions.set(user2, "Session-102");
+userSessions.set(user3, "Session-103");
+
+
+// Get sessions
+
+console.log(userSessions.get(user1));
+console.log(userSessions.get(user2));
+console.log(userSessions.get(user3));
+
+
+// Check users
+
+console.log("Does user1 exist?", userSessions.has(user1));
+console.log("Does user4 exist?", userSessions.has(user4));
+
+
+// Add user4
+
+userSessions.set(user4, "Session-104");
+
+console.log(
+   "User4 session:",
+   userSessions.get(user4)
+);
+
+
+// Delete user2
+
+console.log(
+   "Was user2 deleted?",
+   userSessions.delete(user2)
+);
+
+
+// Check user2
+
+console.log(
+   "Does user2 exist?",
+   userSessions.has(user2)
+);
+
+
+// Function to get session
+
+function getUserSession(user) {
+
+   if (userSessions.has(user)) {
+
+      console.log(
+         `${user.name} has ${userSessions.get(user)}`
+      );
+
+   } else {
+
+      console.log(
+         `${user.name} has no active session`
+      );
+   }
+}
+
+
+// Test function
+
+getUserSession(user1);
+getUserSession(user2);
+getUserSession(user3);
+getUserSession(user4);
+
+
+// Function to remove session
+
+function removeUserSession(user) {
+
+   const removed = userSessions.delete(user);
+
+   console.log(
+      `${user.name} session removed:`,
+      removed
+   );
+}
+
+
+// Remove user3
+
+removeUserSession(user3);
+
+
+// Check user3
+
+console.log(
+   "Does user3 exist?",
+   userSessions.has(user3)
+);

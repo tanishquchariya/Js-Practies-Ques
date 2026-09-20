@@ -371,3 +371,64 @@ Use the Map values and a loop.
 
 ===========================================================
 */
+
+const products = [
+    
+{
+    name: "Laptop",
+    category: "Electronics",
+    price: 75000
+},
+
+{
+    name: "Mouse",
+    category: "Electronics",
+    price: 1200
+},
+
+{
+    name: "Office Chair",
+    category: "Furniture",
+    price: 8500
+},
+
+{
+    name: "Desk",
+    category: "Furniture",
+    price: 12000
+},
+
+{
+    name: "Keyboard",
+    category: "Electronics",
+    price: 2500
+},
+
+{
+    name: "Notebook",
+    category: "Stationery",
+    price: 200
+}
+]
+
+const productPrices = new Map()
+productPrices.set("Laptop", 75000)
+productPrices.set("Mouse", 1200)
+productPrices.set("Office Chair", 8500)
+productPrices.set("Desk", 12000)
+productPrices.set("Keyboard", 2500)
+productPrices.set("Notebook", 200)
+
+
+console.log(productPrices.get("Laptop"))
+console.log(productPrices.get("Keyboard"))
+console.log(productPrices.get("Notebook"))
+
+productPrices.set("Monitor",15000)
+console.log(productPrices);
+
+productPrices.set("Laptop",72000)
+console.log(productPrices.get("Laptop"));
+
+console.log(productPrices.has("Mouse"));
+

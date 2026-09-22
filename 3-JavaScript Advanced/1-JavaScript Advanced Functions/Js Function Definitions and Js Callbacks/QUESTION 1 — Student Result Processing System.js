@@ -148,25 +148,25 @@ const students = [{
 }
 ]
 
-let result;
 function processStudents(students,callback){
     
     for (const i of students) {
+        let result;
         if(i.marks >= 90){
             result = "Excellent"
         }else if(i.marks >= 60){
             result = "Pass"
         }else if(i.marks >= 40){
-            "Needs Improvement"
+            result = "Needs Improvement"
         }else {
             result = "Fail" 
         }
+        callback(i,result)
     }
-    callback(students,result)
 }
 
 function displayStudent (student, result) {
     console.log(`${student.name} -> ${result}`);
-    
+
 }
 processStudents(students, displayStudent);

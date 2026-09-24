@@ -4,9 +4,9 @@
 // }
 // console.log(ele)
 
-const arr = [1,2,3,4,5,6,7,8,9,10];
-// arr.map((i) => console.log(i));
-arr.forEach((i) => console.log(i));
+// const arr = [1,2,3,4,5,6,7,8,9,10];
+// // arr.map((i) => console.log(i));
+// arr.forEach((i) => console.log(i));
 // let ele = 0;
 // for(let i = 0; i<user.length; i++){
 //     ele += user[i]
@@ -60,3 +60,13 @@ arr.forEach((i) => console.log(i));
 
 // console.log(moveZero(nums));
 // console.log(nums);
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "en",
+  get lang() {
+    return this.language;
+  }
+};
+console.log(person.lang);

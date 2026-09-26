@@ -61,12 +61,22 @@
 // console.log(moveZero(nums));
 // console.log(nums);
 
-const person = {
-  firstName: "John",
-  lastName: "Doe",
-  language: "en",
-  get lang() {
-    return this.language;
-  }
-};
-console.log(person.lang);
+// class Car {
+//   constructor(name, year) {
+//     this.name = name;
+//     this.year = year;
+//   }
+// }
+
+// const myCar1 = new Car("Ford", 2014);
+// const myCar2 = new Car("Audi", 2019);
+// console.log(myCar1);
+
+console.log(x);
+myfun()
+
+var x = 6
+function myfun() {
+  console.log("Tanishq Ucha");
+  
+}
